@@ -2,8 +2,9 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
+    const { req } = ctx;
     const initialProps = await Document.getInitialProps(ctx);
-    let fullUrl = "";
+    let fullUrl;
     if (req) {
       fullUrl = req.protocol + "://" + req.get("host") + req.originalUrl;
     } else {
@@ -16,7 +17,7 @@ class MyDocument extends Document {
     return {
       ...initialProps,
       fullUrl,
-      isBlog: _.includes(fullUrl, "/blog")
+      isBlog: fullUrl.includes("/blog")
     };
   }
 
