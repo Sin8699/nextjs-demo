@@ -1,7 +1,18 @@
 // import App from 'next/app'
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <Head>
+        <meta
+          property="og:title"
+          content={"Appfast - Mobile app creator platform"}
+        />
+      </Head>
+      <Component {...pageProps} />
+    </>
+  );
 }
 
 // Only uncomment this method if you have blocking data requirements for

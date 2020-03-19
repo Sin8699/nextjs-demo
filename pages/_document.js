@@ -21,7 +21,6 @@ class MyDocument extends Document {
 
   render() {
     const { fullUrl, isBlog } = this.props;
-    console.log("isBlog: ", isBlog);
     return (
       <Html lang="en" preload="true">
         <Head preload="true">
@@ -30,10 +29,7 @@ class MyDocument extends Document {
             content={`https://keystone-5.herokuapp.com/`}
           />
           <meta property="og:type" content={"website"} />
-          <meta
-            property="og:title"
-            content={"Appfast - Mobile app creator platform"}
-          />
+
           <meta
             property="og:image"
             content={
