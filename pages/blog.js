@@ -26,9 +26,11 @@ const Blog = () => {
           background: brown;
           margin: auto;
         }
-        button {
-          width: 100%;
-          height: 100%;
+        .react-share__ShareButton,
+        button,
+        .mdi {
+          width: 100px !important;
+          height: 100px !important;
         }
       `}</style>
     </div>
