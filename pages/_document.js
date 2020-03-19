@@ -32,9 +32,7 @@ class MyDocument extends Document {
           <meta property="og:type" content={"website"} />
           <meta
             property="og:title"
-            content={
-              isBlog ? "blog-test" : "Appfast - Mobile app creator platform"
-            }
+            content={"Appfast - Mobile app creator platform"}
           />
           <meta
             property="og:image"

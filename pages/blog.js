@@ -11,6 +11,10 @@ const Blog = () => {
     <div>
       <Head>
         <title>BLOG</title>
+        <meta
+          property="og:title"
+          content={"Blog test"}
+        />
       </Head>
       <div className="share">
         <FacebookShareButton url={`${Href}`} quote={`appfast`}>
