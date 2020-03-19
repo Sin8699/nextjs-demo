@@ -39,7 +39,7 @@ class MyDocument extends Document {
           <meta
             property="og:image"
             content={
-              "https://res.cloudinary.com/kolorlife/image/upload/c_fill,h_772,w_768/v1583924517/Kolorlife/5e68c523bef1f00023e9bd25.jpg"
+              "https://res.cloudinary.com/kolorlife/image/upload/v1583924517/Kolorlife/5e68c523bef1f00023e9bd25.jpg"
             }
           />
           <meta
