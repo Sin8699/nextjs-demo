@@ -6,13 +6,11 @@ class MyDocument extends Document {
     const initialProps = await Document.getInitialProps(ctx);
     let fullUrl;
     if (req) {
-      fullUrl = req.protocol + "://" + req.get("host") + req.originalUrl;
+      const protocol = req.headers["x-forwarded-proto"] || "http";
+      fullUrl = req ? `${protocol}://${req.headers.host}` : "";
+      // fullUrl = req.protocol + "://" + req.get("host") + req.originalUrl;
     } else {
-      fullUrl =
-        window.location.protocol +
-        "//" +
-        window.location.hostname +
-        (window.location.port ? ":" + window.location.port : "");
+      fullUrl = "";
     }
     return {
       ...initialProps,
@@ -23,6 +21,7 @@ class MyDocument extends Document {
 
   render() {
     const { fullUrl, isBlog } = this.props;
+    console.log("isBlog: ", isBlog);
     return (
       <Html lang="en" preload="true">
         <Head preload="true">
@@ -40,9 +39,7 @@ class MyDocument extends Document {
           <meta
             property="og:image"
             content={
-              isBlog
-                ? "https://res.cloudinary.com/kolorlife/image/upload/c_fill,h_245,w_570/v1583924517/Kolorlife/5e68c523bef1f00023e9bd25.jpg"
-                : "https://nevable02.s3-ap-southeast-1.amazonaws.com/images/facebook-share.jpg"
+              "https://res.cloudinary.com/kolorlife/image/upload/c_fill,h_245,w_570/v1583924517/Kolorlife/5e68c523bef1f00023e9bd25.jpg"
             }
           />
           <meta
