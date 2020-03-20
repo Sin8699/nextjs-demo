@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <meta
           property="og:title"
-          content={"Appfast - Mobile app creator platform"}
+          content={"Appfast"}
         />
         {/* <meta
           property="og:image"

@@ -24,6 +24,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en" preload="true">
         <Head preload="true">
+          <meta property="og:title" content={"Appfast - TEST JDON"} />
           <meta
             property="og:url"
             content={`https://keystone-5.herokuapp.com/`}
