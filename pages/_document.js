@@ -30,6 +30,10 @@ class MyDocument extends Document {
           />
           <meta property="og:type" content={"website"} />
           <meta
+            property="og:image"
+            content="https://nevable02.s3-ap-southeast-1.amazonaws.com/images/facebook-share.jpg"
+          ></meta>
+          <meta
             property="og:description"
             content="Fastest and Simplest way to build your mobile apps without coding knowledge"
           />
