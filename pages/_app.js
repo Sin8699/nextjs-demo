@@ -1,20 +1,23 @@
 // import App from 'next/app'
 import Head from "next/head";
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, pathname }) {
+  console.log("pathname: ", pathname);
   return (
     <>
       <Head>
-        <meta
-          property="og:title"
-          content={"Appfast"}
-        />
-        {/* <meta
-          property="og:image"
-          content={
-            "https://res.cloudinary.com/kolorlife/image/upload/v1583924517/Kolorlife/5e68c523bef1f00023e9bd25.jpg"
-          }
-        /> */}
+        {pathname === "/blog" && (
+          <>
+            {" "}
+            <meta property="og:title" content={"Appfast"} />
+            <meta
+              property="og:image"
+              content={
+                "https://res.cloudinary.com/kolorlife/image/upload/v1583924517/Kolorlife/5e68c523bef1f00023e9bd25.jpg"
+              }
+            />
+          </>
+        )}
       </Head>
       <Component {...pageProps} />
     </>
@@ -26,11 +29,15 @@ function MyApp({ Component, pageProps }) {
 // perform automatic static optimization, causing every page in your app to
 // be server-side rendered.
 //
-// MyApp.getInitialProps = async (appContext) => {
-//   // calls page's `getInitialProps` and fills `appProps.pageProps`
-//   const appProps = await App.getInitialProps(appContext);
-//
-//   return { ...appProps }
-// }
+MyApp.getInitialProps = async appContext => {
+  const { ctx } = appContext;
+
+  let pageProps = {};
+
+  if (appContext.Component.getInitialProps) {
+    pageProps = await Component.getInitialProps(ctx);
+  }
+  return { ...pageProps, pathname: ctx.pathname };
+};
 
 export default MyApp;
