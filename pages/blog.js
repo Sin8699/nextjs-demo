@@ -11,6 +11,13 @@ const Blog = () => {
     <div>
       <Head>
         <title>BLOG</title>
+        <meta property="og:title" content={"blog title"} />
+        <meta
+          property="og:image"
+          content={
+            "https://res.cloudinary.com/kolorlife/image/upload/c_fill,w_830/v1583998874/Kolorlife/5e69e797bef1f00023e9bd2e.jpg"
+          }
+        />
       </Head>
       <div className="share">
         <FacebookShareButton url={`${Href}`} quote={`appfast`}>

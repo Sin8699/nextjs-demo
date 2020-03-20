@@ -2,7 +2,6 @@
 import Head from "next/head";
 
 function MyApp({ Component, pageProps, pathname }) {
-  console.log("pathname: ", pathname);
   const title = pathname === "/blog" ? "Appfast" : "Appfast - TEST JDON";
   const type = pathname === "/blog" ? "article" : "website";
   const url =
