@@ -17,6 +17,10 @@ function MyApp({ Component, pageProps, pathname }) {
               }
             />
             <meta property="og:type" content={"website"} />
+            <meta
+              property="og:url"
+              content={`https://keystone-5.herokuapp.com/blog`}
+            />
           </>
         ) : (
           <>
@@ -26,6 +30,10 @@ function MyApp({ Component, pageProps, pathname }) {
               property="og:image"
               content="https://nevable02.s3-ap-southeast-1.amazonaws.com/images/facebook-share.jpg"
             ></meta>
+            <meta
+              property="og:url"
+              content={`https://keystone-5.herokuapp.com/`}
+            />
           </>
         )}
       </Head>

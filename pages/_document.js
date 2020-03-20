@@ -25,10 +25,6 @@ class MyDocument extends Document {
       <Html lang="en" preload="true">
         <Head preload="true">
           <meta
-            property="og:url"
-            content={`https://keystone-5.herokuapp.com/`}
-          />
-          <meta
             property="og:description"
             content="Fastest and Simplest way to build your mobile apps without coding knowledge"
           />
