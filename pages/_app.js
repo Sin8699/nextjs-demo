@@ -3,39 +3,23 @@ import Head from "next/head";
 
 function MyApp({ Component, pageProps, pathname }) {
   console.log("pathname: ", pathname);
+  const title = pathname === "/blog" ? "Appfast" : "Appfast - TEST JDON";
+  const type = pathname === "/blog" ? "article" : "website";
+  const url =
+    pathname === "/blog"
+      ? "https://keystone-5.herokuapp.com/blog"
+      : "https://keystone-5.herokuapp.com";
+  const image =
+    pathname === "/blog"
+      ? "https://res.cloudinary.com/kolorlife/image/upload/v1583924517/Kolorlife/5e68c523bef1f00023e9bd25.jpg"
+      : "https://nevable02.s3-ap-southeast-1.amazonaws.com/images/facebook-share.jpg";
   return (
     <>
       <Head>
-        {pathname === "/blog" ? (
-          <>
-            {" "}
-            <meta property="og:title" content={"Appfast"} />
-            <meta property="og:type" content={"article"} />
-            <meta
-              property="og:image"
-              content={
-                "https://res.cloudinary.com/kolorlife/image/upload/v1583924517/Kolorlife/5e68c523bef1f00023e9bd25.jpg"
-              }
-            />
-            <meta
-              property="og:url"
-              content={`https://keystone-5.herokuapp.com/blog`}
-            />
-          </>
-        ) : (
-          <>
-            <meta property="og:title" content={"Appfast - TEST JDON"} />
-            <meta property="og:type" content={"website"} />
-            <meta
-              property="og:image"
-              content="https://nevable02.s3-ap-southeast-1.amazonaws.com/images/facebook-share.jpg"
-            ></meta>
-            <meta
-              property="og:url"
-              content={`https://keystone-5.herokuapp.com/`}
-            />
-          </>
-        )}
+        <meta property="og:title" content={title} />
+        <meta property="og:type" content={type} />
+        <meta property="og:image" content={image} />
+        <meta property="og:url" content={url} />
       </Head>
       <Component {...pageProps} />
     </>
