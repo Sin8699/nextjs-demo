@@ -29,13 +29,6 @@ class MyDocument extends Document {
             content={`https://keystone-5.herokuapp.com/`}
           />
           <meta property="og:type" content={"website"} />
-
-          <meta
-            property="og:image"
-            content={
-              "https://res.cloudinary.com/kolorlife/image/upload/v1583924517/Kolorlife/5e68c523bef1f00023e9bd25.jpg"
-            }
-          />
           <meta
             property="og:description"
             content="Fastest and Simplest way to build your mobile apps without coding knowledge"
