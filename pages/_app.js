@@ -9,12 +9,12 @@ function MyApp({ Component, pageProps }) {
           property="og:title"
           content={"Appfast - Mobile app creator platform"}
         />
-        <meta
+        {/* <meta
           property="og:image"
           content={
             "https://res.cloudinary.com/kolorlife/image/upload/v1583924517/Kolorlife/5e68c523bef1f00023e9bd25.jpg"
           }
-        />
+        /> */}
       </Head>
       <Component {...pageProps} />
     </>
