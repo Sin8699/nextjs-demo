@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps, pathname }) {
   return (
     <>
       <Head>
-        {pathname === "/blog" && (
+        {pathname === "/blog" ? (
           <>
             {" "}
             <meta property="og:title" content={"Appfast"} />
@@ -16,6 +16,16 @@ function MyApp({ Component, pageProps, pathname }) {
                 "https://res.cloudinary.com/kolorlife/image/upload/v1583924517/Kolorlife/5e68c523bef1f00023e9bd25.jpg"
               }
             />
+            <meta property="og:type" content={"website"} />
+          </>
+        ) : (
+          <>
+            <meta property="og:title" content={"Appfast - TEST JDON"} />
+            <meta property="og:type" content={"article"} />
+            <meta
+              property="og:image"
+              content="https://nevable02.s3-ap-southeast-1.amazonaws.com/images/facebook-share.jpg"
+            ></meta>
           </>
         )}
       </Head>

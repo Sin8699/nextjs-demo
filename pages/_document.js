@@ -24,16 +24,10 @@ class MyDocument extends Document {
     return (
       <Html lang="en" preload="true">
         <Head preload="true">
-          <meta property="og:title" content={"Appfast - TEST JDON"} />
           <meta
             property="og:url"
             content={`https://keystone-5.herokuapp.com/`}
           />
-          <meta property="og:type" content={"website"} />
-          <meta
-            property="og:image"
-            content="https://nevable02.s3-ap-southeast-1.amazonaws.com/images/facebook-share.jpg"
-          ></meta>
           <meta
             property="og:description"
             content="Fastest and Simplest way to build your mobile apps without coding knowledge"
