@@ -33,6 +33,12 @@ class MyDocument extends Document {
             property="og:description"
             content="Fastest and Simplest way to build your mobile apps without coding knowledge"
           />
+          <meta property="og:title" key="title" content="DOCUMENT" />
+          <meta
+            property="og:image"
+            key="image"
+            content="https://res.cloudinary.com/ddh33aomk/image/upload/v1584438250/BlogDetail/Xu%20h%C6%B0%E1%BB%9Bng%20App%20mobile/ai_b5zciv.jpg"
+          />
           <meta property="og:image:width" content="768" />
           <meta property="og:image:height" content="772" />
           <noscript>

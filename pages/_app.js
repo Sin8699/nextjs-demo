@@ -15,8 +15,12 @@ function MyApp({ Component, pageProps, pathname }) {
     <>
       <Head>
         <title>Mobile app creator platform</title>
-        <meta property="og:title" key="title" content={`${title}`} />
-        <meta property="og:image" key="image" content={`${image}`} />
+        {pathname.includes("/blog") && (
+          <>
+            <meta property="og:title" key="title" content={`${title}`} />
+            <meta property="og:image" key="image" content={`${image}`} />
+          </>
+        )}
       </Head>
       <Component {...pageProps} />
     </>
