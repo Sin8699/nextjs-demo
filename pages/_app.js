@@ -1,13 +1,14 @@
 // import App from 'next/app'
 import Head from "next/head";
 
-function MyApp({ Component, pageProps, pathname }) {
+function MyApp({ Component, pageProps, pathname, asPath }) {
   const title = pathname === "/blog" ? "Appfast" : "Appfast - TEST JDON";
   const type = pathname === "/blog" ? "article" : "website";
-  const url =
-    pathname === "/blog"
+  const url = pathname.includes("/blog")
+    ? pathname === "/blog"
       ? "https://keystone-5.herokuapp.com/blog"
-      : "https://keystone-5.herokuapp.com";
+      : "https://keystone-5.herokuapp.com/blog/123"
+    : "https://keystone-5.herokuapp.com";
   const image =
     pathname === "/blog"
       ? "https://res.cloudinary.com/kolorlife/image/upload/v1583924517/Kolorlife/5e68c523bef1f00023e9bd25.jpg"
