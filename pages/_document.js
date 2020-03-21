@@ -31,6 +31,15 @@ class MyDocument extends Document {
           />
           <meta property="og:image:width" content="768" />
           <meta property="og:image:height" content="772" />
+          <noscript>
+            <meta
+              property="og:image"
+              content="https://nevable02.s3-ap-southeast-1.amazonaws.com/images/facebook-share.jpg"
+            />
+          </noscript>
+          <noscript>
+            <meta property="og:title" content={"no script"} />
+          </noscript>
         </Head>
         <body>
           <Main />
