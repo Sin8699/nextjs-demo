@@ -7,12 +7,6 @@ function MyApp({ Component, pageProps, pathname }) {
       ? "Appfast"
       : "blog title"
     : "Appfast - TEST JDON";
-  const type = pathname.includes("/blog") ? "article" : "website";
-  const url = pathname.includes("/blog")
-    ? pathname === "/blog"
-      ? "https://keystone-5.herokuapp.com/blog"
-      : "https://keystone-5.herokuapp.com/blog/123"
-    : "https://keystone-5.herokuapp.com";
   const image = pathname.includes("/blog")
     ? pathname === "/blog"
       ? "https://res.cloudinary.com/kolorlife/image/upload/v1583924517/Kolorlife/5e68c523bef1f00023e9bd25.jpg"
@@ -22,9 +16,7 @@ function MyApp({ Component, pageProps, pathname }) {
     <>
       <Head>
         <meta property="og:title" content={title} />
-        <meta property="og:type" content={type} />
         <meta property="og:image" content={image} />
-        <meta property="og:url" content={url} />
       </Head>
       <Component {...pageProps} />
     </>

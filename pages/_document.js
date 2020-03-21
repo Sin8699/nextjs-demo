@@ -2,28 +2,29 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
-    const { req } = ctx;
+    const { req, pathname } = ctx;
     const initialProps = await Document.getInitialProps(ctx);
-    let fullUrl;
-    if (req) {
-      const protocol = req.headers["x-forwarded-proto"] || "http";
-      fullUrl = req ? `${protocol}://${req.headers.host}` : "";
-      // fullUrl = req.protocol + "://" + req.get("host") + req.originalUrl;
-    } else {
-      fullUrl = "";
-    }
+
+    const type = pathname.includes("/blog") ? "article" : "website";
+    const url = pathname.includes("/blog")
+      ? pathname === "/blog"
+        ? "https://keystone-5.herokuapp.com/blog"
+        : "https://keystone-5.herokuapp.com/blog/123"
+      : "https://keystone-5.herokuapp.com";
     return {
       ...initialProps,
-      fullUrl,
-      isBlog: fullUrl.includes("/blog")
+      type,
+      url
     };
   }
 
   render() {
-    const { fullUrl, isBlog } = this.props;
+    const { type, url } = this.props;
     return (
       <Html lang="en" preload="true">
         <Head preload="true">
+          <meta property="og:type" content={type} />
+          <meta property="og:url" content={url} />
           <meta
             property="og:description"
             content="Fastest and Simplest way to build your mobile apps without coding knowledge"
