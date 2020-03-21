@@ -9,6 +9,14 @@ const BlogDetail = () => {
   }, []);
   return (
     <div>
+      <Head>
+        <meta
+          property="og:image"
+          key="image"
+          content="https://res.cloudinary.com/ddh33aomk/image/upload/v1584438250/BlogDetail/Xu%20h%C6%B0%E1%BB%9Bng%20App%20mobile/ai_b5zciv.jpg"
+        />
+        <meta property="og:title" key="title" content="AI MACHINE" />
+      </Head>
       <div className="share">
         <FacebookShareButton url={`${Href}`} quote={`appfast`}>
           <span className="mdi mdi-facebook icon"></span>
