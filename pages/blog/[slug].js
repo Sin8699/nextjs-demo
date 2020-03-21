@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import { FacebookShareButton } from "react-share";
 
-const Blog = () => {
+const BlogDetail = () => {
   const [Href, setHref] = useState(null);
   useEffect(() => {
     setHref(window.location.href);
@@ -10,7 +10,6 @@ const Blog = () => {
   return (
     <div>
       <Head>
-        <title>BLOG</title>
         <meta property="og:title" content={"blog title"} />
         <meta
           property="og:image"
@@ -24,7 +23,6 @@ const Blog = () => {
           <span className="mdi mdi-facebook icon"></span>
         </FacebookShareButton>
       </div>
-      <div className="hero">BLOG</div>
       <style jsx>{`
         .share {
           width: 100px;
@@ -36,12 +34,12 @@ const Blog = () => {
         .react-share__ShareButton,
         button,
         .mdi {
-          width: 100px !important;
-          height: 100px !important;
+          width: 100% !important;
+          height: 100% !important;
         }
       `}</style>
     </div>
   );
 };
 
-export default Blog;
+export default BlogDetail;
