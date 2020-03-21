@@ -1,4 +1,3 @@
-// import App from 'next/app'
 import Head from "next/head";
 
 function MyApp({ Component, pageProps, pathname }) {
@@ -15,6 +14,7 @@ function MyApp({ Component, pageProps, pathname }) {
   return (
     <>
       <Head>
+        <title>Mobile app creator platform</title>
         <meta property="og:title" content={`${title}`} />
         <meta property="og:image" content={`${image}`} />
       </Head>

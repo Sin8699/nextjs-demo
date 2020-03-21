@@ -23,8 +23,12 @@ class MyDocument extends Document {
     return (
       <Html lang="en" preload="true">
         <Head preload="true">
+          <meta
+            content="width=device-width, initial-scale=1, maximum-scale=5, shrink-to-fit=no"
+            name="viewport"
+          />
           <meta property="og:type" content={type} />
-          <meta property="og:url" content={url} />
+          <meta property="og:url" content={`${url}`} />
           <meta
             property="og:description"
             content="Fastest and Simplest way to build your mobile apps without coding knowledge"
