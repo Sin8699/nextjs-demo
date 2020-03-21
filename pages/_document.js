@@ -8,9 +8,9 @@ class MyDocument extends Document {
     const type = pathname.includes("/blog") ? "article" : "website";
     const url = pathname.includes("/blog")
       ? pathname === "/blog"
-        ? "https://keystone-5.herokuapp.com/blog"
-        : "https://keystone-5.herokuapp.com/blog/123"
-      : "https://keystone-5.herokuapp.com";
+        ? 'https://keystone-5.herokuapp.com/blog'
+        : 'https://keystone-5.herokuapp.com/blog/123'
+      : 'https://keystone-5.herokuapp.com';
     return {
       ...initialProps,
       type,
@@ -38,7 +38,7 @@ class MyDocument extends Document {
           <noscript>
             <meta
               property="og:image"
-              content="https://nevable02.s3-ap-southeast-1.amazonaws.com/images/facebook-share.jpg"
+              content='https://nevable02.s3-ap-southeast-1.amazonaws.com/images/facebook-share.jpg'
             />
           </noscript>
           <noscript>
