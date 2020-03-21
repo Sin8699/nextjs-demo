@@ -15,8 +15,8 @@ function MyApp({ Component, pageProps, pathname }) {
   return (
     <>
       <Head>
-        <meta property="og:title" content={title} />
-        <meta property="og:image" content={image} />
+        <meta property="og:title" content={`${title}`} />
+        <meta property="og:image" content={`${image}`} />
       </Head>
       <Component {...pageProps} />
     </>
